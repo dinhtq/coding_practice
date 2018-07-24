@@ -3,39 +3,47 @@
 */
 
 
-// FAILS!
-function findSecondLargest(treeRoot) {
+// iterative
 
-    if (!treeRoot) {
+function findLargest (node) {
+    if (!node) {
         return null;
     }
 
-    const nodes = [];
-    nodes.push([treeRoot, null]);
+    let current = node;
 
-    while(nodes.length) {
-        const nodePair = nodes.pop();
-        const node = nodePair[0];
-        const ancestor = nodePair[1];
-
-        // check if last
-        if (!node.right && !node.left) {
-            // ancestor has right leaf?
-            if (ancestor.right) {
-                return ancestor.value;
-            } else {
-                return node.value;
-            }
+    while(current) {
+        if (!current.right) {
+            return current.value;
         }
 
-        // traversal continuation
-        if (node.right) {
-            nodes.push([node.right, node]);
+        current = current.right;
+    }
+
+    return null;
+}
+
+function findSecondLargest(treeRoot) {
+
+    if (!treeRoot || !treeRoot.right && !treeRoot.left) {
+        throw new Error('tree is too short!');
+    }
+
+    let currentNode = treeRoot;
+
+    while(currentNode) {
+        // case - node has no right, but has left subtree
+        if (!currentNode.right && currentNode.left) {
+            return findLargest(currentNode.left);
         }
 
-        if (node.left) {
-            nodes.push([node.left, node]);
+        // case - node has no left subtree, and is second to last
+        if (currentNode.right && !currentNode.right.right && !currentNode.right.left) {
+            return currentNode.value;
         }
+
+        // continue
+        currentNode = currentNode.right;
     }
 
     return null;
