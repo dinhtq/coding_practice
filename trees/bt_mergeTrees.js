@@ -16,6 +16,8 @@
  * @param {TreeNode} t2
  * @return {TreeNode}
  */
+
+ // recursive
 var mergeTrees = function(t1, t2) {
   // bail case
   if (t1 === null) return t2
@@ -29,4 +31,35 @@ var mergeTrees = function(t1, t2) {
   
   // return
   return t2
+}
+
+// iterative
+var mergeTrees = function(t1, t2) {
+  if (t1 === null) return t2
+  
+  var stack = [[t1, t2]]
+  
+  while (stack.length) {
+      var nodesPair = stack.pop()
+      
+      if (nodesPair[0] === null || nodesPair[1] === null) {
+          continue
+      }
+      
+      nodesPair[0].val += nodesPair[1].val
+      
+      if (nodesPair[0].left === null) {
+          nodesPair[0].left = nodesPair[1].left
+      } else {
+          stack.push([nodesPair[0].left, nodesPair[1].left])   
+      }
+      
+      if (nodesPair[0].right === null) {
+          nodesPair[0].right = nodesPair[1].right
+      } else {
+          stack.push([nodesPair[0].right, nodesPair[1].right])   
+      }
+  }
+  
+  return t1
 };
