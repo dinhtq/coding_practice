@@ -1,4 +1,29 @@
+// https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/928/
 // return the preorder traversal of a binary tree
+
+
+function preorderTraversal(root) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var preorderTraversal = function(root) {
     if (!root) return []
