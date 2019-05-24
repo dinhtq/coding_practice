@@ -3,15 +3,9 @@
 // traverse binary tree in order
 // https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/929/
 
-
-
-
-function inorderTraversal(root) {}
-
-
-
-
-
+function inorderTraversal(root) {
+  
+}
 
 
 
@@ -129,23 +123,20 @@ assertEqualsObject(inorderTraversal(treeRoot), [], desc)
 
 // iterative
 // function inorderTraversal(root) {
-//   if (!root) return []
-
-//   const stack = []
-//   const values = []
-
-//   let curNode = root
-
-//   while(curNode || stack.length) {
-//       while (curNode) {
+//   var stack = []
+//   var arr = []
+//   var curNode = root
+  
+//   while(stack.length || curNode) {
+//       if (curNode) {
 //           stack.push(curNode)
 //           curNode = curNode.left
+//       } else {
+//           curNode = stack.pop()
+//           arr.push(curNode.val)
+//           curNode = curNode.right
 //       }
-
-//       curNode = stack.pop()
-//       values.push(curNode.value)
-//       curNode = curNode.right
 //   }
-
-//   return values
+  
+//   return arr
 // }
