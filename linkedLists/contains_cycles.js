@@ -16,25 +16,7 @@ class LinkedListNode {
 }
 
 
-function containsCycle(firstNode) {
-  // use two pointers, with fast pointer going faster by two nodes
-  // on each loop, and if fast pointer is not null and equals slow pointer (laps it),
-  // then LL contains cycle
-
-  let slow = firstNode
-  let fast = firstNode
-
-  while (fast && fast.next) {
-    slow = slow.next
-    fast = fast.next.next
-
-    if (fast === slow) {
-      return true
-    }
-  }
-
-  return false
-}
+function containsCycle(firstNode) {}
 
 
 
