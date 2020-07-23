@@ -17,24 +17,23 @@ class LinkedListNode {
 
 
 function containsCycle(firstNode) {
+  // use two pointers, with fast pointer going faster by two nodes
+  // on each loop, and if fast pointer is not null and equals slow pointer (laps it),
+  // then LL contains cycle
 
-  // Start both runners at the beginning
-  let slowRunner = firstNode;
-  let fastRunner = firstNode;
+  let slow = firstNode
+  let fast = firstNode
 
-  // Until we hit the end of the list
-  while (fastRunner && fastRunner.next) {
-    slowRunner = slowRunner.next;
-    fastRunner = fastRunner.next.next;
+  while (fast && fast.next) {
+    slow = slow.next
+    fast = fast.next.next
 
-    // Case: fastRunner is about to "lap" slowRunner
-    if (fastRunner === slowRunner) {
-      return true;
+    if (fast === slow) {
+      return true
     }
   }
 
-  // Case: fastRunner hit the end of the list
-  return false;
+  return false
 }
 
 
@@ -106,3 +105,26 @@ function assertEquals(a, b, desc) {
     console.log(`${desc} ... FAIL: ${a} != ${b}`);
   }
 }
+
+
+// solution
+// function containsCycle(firstNode) {
+
+//   // Start both runners at the beginning
+//   let slowRunner = firstNode;
+//   let fastRunner = firstNode;
+
+//   // Until we hit the end of the list
+//   while (fastRunner && fastRunner.next) {
+//     slowRunner = slowRunner.next;
+//     fastRunner = fastRunner.next.next;
+
+//     // Case: fastRunner is about to "lap" slowRunner
+//     if (fastRunner === slowRunner) {
+//       return true;
+//     }
+//   }
+
+//   // Case: fastRunner hit the end of the list
+//   return false;
+// }
