@@ -15,25 +15,6 @@ class LinkedListNode {
 
 function reverse(head) {
 
-  // Reverse the linked list in place
-
-  let prevNode = null;
-  let nextNode = null;
-
-  while(head) {
-    // assign next node
-    nextNode = head.next;
-
-    // point cur head to prev node
-    head.next = prevNode;
-
-    // re-assign prev node to cur head
-    prevNode = head;
-    // re-assign cur head to next node
-    head = nextNode;
-  }
-
-  return prevNode;
 }
 
 
@@ -105,3 +86,39 @@ function assertEquals(a, b, desc) {
     console.log(`${desc} ... FAIL: ${a} != ${b}`);
   }
 }
+
+
+// iterative solution
+// function reverse(head) {
+
+//   // Reverse the linked list in place
+
+//   let prevNode = null;
+//   let nextNode = null;
+
+//   while(head) {
+//     // assign next node
+//     nextNode = head.next;
+
+//     // point cur head to prev node
+//     head.next = prevNode;
+
+//     // re-assign prev node to cur head
+//     prevNode = head;
+//     // re-assign cur head to next node
+//     head = nextNode;
+//   }
+
+//   return prevNode;
+// }
+
+// recursive solution
+// function reverse(head) {
+//   if (head === null || head.next === null) {
+//     return head
+//   }
+//   const p = reverse(head.next)
+//   head.next.next = head
+//   head.next = null
+//   return p
+// }
