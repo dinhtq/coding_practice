@@ -12,21 +12,7 @@ class LinkedListNode {
   }
 }
 
-function deleteNode(nodeToDelete) {
-
-  // Delete the input node from the linked list
-  
-  const nextNode = nodeToDelete.next;
-
-  if (nextNode) {
-    // copy next node values to current node, effetively deleteing the current node
-    nodeToDelete.value = nextNode.value;
-    nodeToDelete.next = nextNode.next;
-  } else {
-    throw new Error('Cannot delete last node with this method');
-  }
-
-}
+function deleteNode(nodeToDelete) {}
 
 
 
