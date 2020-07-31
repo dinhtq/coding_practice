@@ -87,3 +87,27 @@ function assertEquals(a, b, desc) {
 //   }
 //   return true
 // }
+
+// recursive solution
+// function isPalindrome(head) {
+//   let left
+  
+//   function isPalin(right) {
+//     left = head
+//     if (!right) {
+//       return true
+//     }
+    
+//     const isp = isPalin(right.next)
+    
+//     if (!isp) { return false }
+
+//     const isp1 = right.value === left.value
+
+//     left = left.next
+
+//     return isp1
+//   }
+
+//   return isPalin(head)
+// }
