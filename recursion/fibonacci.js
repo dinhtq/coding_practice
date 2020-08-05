@@ -1,7 +1,9 @@
-// return the nth fibonacci number
-// Input: 6
-// output: 8
+const assertEquals = require('../utils/assertEquals')
 
+/* return the nth fibonacci number
+Input: 6
+Output: 8
+*/
 
 
 
@@ -43,13 +45,6 @@ n = fibSequence.length - 1
 desc = `n = ${n}`
 assertEquals(fib(n), fibSequence[n], desc);
 
-function assertEquals(a, b, desc) {
-  if (a === b) {
-    console.log(`${desc} ... PASS`);
-  } else {
-    console.log(`${desc} ... FAIL: ${a} != ${b}`);
-  }
-}
 
 
 

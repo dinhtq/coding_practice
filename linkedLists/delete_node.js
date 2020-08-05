@@ -1,3 +1,4 @@
+const assertEquals = require('../utils/assertEquals')
 /*
   Delete a node from a singly-linked list, given only a variable pointing to that node.
 */
@@ -87,14 +88,6 @@ function appendToList(head, value) {
   }
   tail.next = new LinkedListNode(value);
   return tail.next; 
-}
-
-function assertEquals(a, b, desc) {
-  if (a === b) {
-    console.log(`${desc} ... PASS`);
-  } else {
-    console.log(`${desc} ... FAIL: ${a} != ${b}`)
-  }
 }
 
 function assertThrows(func, desc) {

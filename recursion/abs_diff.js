@@ -1,3 +1,4 @@
+const assertEquals = require('../utils/assertEquals')
 /*
   Return absolute difference between all items in two arrays of integers of same length.
 */
@@ -32,9 +33,8 @@ function totalDiff(arr1, arr2) {
 // TEST CASE
 const arr1 = [15, -4, 56, 10, -23]
 const arr2 = [14, -9, 56, 14, -23]
+assertEquals(totalDiff(arr1, arr2), 10, 'test')
 
-
-console.log(totalDiff(arr1, arr2) === 10)
 
 
 // iterative

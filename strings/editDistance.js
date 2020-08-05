@@ -1,3 +1,5 @@
+const assertEquals = require('../utils/assertEquals')
+
 /*
 
 The edit distance between two strings refers to the minimum number of character insertions,
@@ -17,14 +19,6 @@ function getEditDistance(str1, str2) {
 
 
 
-
-function assertEquals(a, b, desc) {
-  if (a === b) {
-    console.log(`${desc} ... PASS`);
-  } else {
-    console.log(`${desc} ... FAIL: ${a} != ${b}`)
-  }
-}
 
 assertEquals(getEditDistance('kitten', 'sitting'), 3, 'two full strings')
 

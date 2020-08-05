@@ -1,3 +1,4 @@
+const assertEquals = require('../utils/assertEquals')
 /*
 
 A cycle occurs when a node’s next points back to a previous node in the list. The linked list is no longer linear with a beginning and end—instead,
@@ -78,14 +79,6 @@ function valuesToLinkedListNodes(values) {
     nodes.push(node);
   }
   return nodes;
-}
-
-function assertEquals(a, b, desc) {
-  if (a === b) {
-    console.log(`${desc} ... PASS`);
-  } else {
-    console.log(`${desc} ... FAIL: ${a} != ${b}`);
-  }
 }
 
 

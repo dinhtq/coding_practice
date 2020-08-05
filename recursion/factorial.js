@@ -1,3 +1,4 @@
+const assertEquals = require('../utils/assertEquals')
 /*
   Return factorial of n.
 */
@@ -32,8 +33,9 @@ function factorial(n) {
 // TEST CASE
 
 // 6 * 5 * 4 * 3 * 2 * 1 = 
-console.log(factorial(6) === (6 * 5 * 4 * 3 * 2 * 1))
-console.log(factorial(7) === 5040)
+assertEquals(factorial(6), (6 * 5 * 4 * 3 * 2 * 1), 'n = 6')
+assertEquals(factorial(7), 5040, 'n = 7')
+
 
 
 

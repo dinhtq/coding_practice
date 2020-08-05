@@ -1,3 +1,4 @@
+const assertEquals = require('../utils/assertEquals')
 /*
 Write a function for reversing a linked list. ↴ Do it in place. ↴
 
@@ -77,14 +78,6 @@ function isListReversed(list, originalNodes) {
     i--;
   }
   return list == null;
-}
-
-function assertEquals(a, b, desc) {
-  if (a === b) {
-    console.log(`${desc} ... PASS`);
-  } else {
-    console.log(`${desc} ... FAIL: ${a} != ${b}`);
-  }
 }
 
 

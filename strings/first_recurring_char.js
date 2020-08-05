@@ -1,3 +1,5 @@
+const assertEquals = require('../utils/assertEquals')
+
 // return the first recurring character in a string
 // https://www.youtube.com/watch?v=GJdiM-muYqc
 
@@ -26,10 +28,9 @@ function firstChar(str) {
 
 
 
-
-console.log(firstChar('ABCA') === 'A')
-console.log(firstChar('BCABA') === 'B')
-console.log(firstChar('ABC') === null || firstChar('ABC') === '')
+assertEquals(firstChar('ABCA'), 'A', 'ABCA')
+assertEquals('BCABA', 'B', 'BCABA')
+assertEquals(firstChar('ABC'), null, 'ABC')
 
 
 

@@ -1,3 +1,4 @@
+const assertEquals = require('../utils/assertEquals')
 /*
 Given a singly linked list, determine if it is a palindrome.
 */
@@ -58,14 +59,6 @@ function appendToList(head, value) {
   }
   tail.next = new LinkedListNode(value);
   return tail.next; 
-}
-
-function assertEquals(a, b, desc) {
-  if (a === b) {
-    console.log(`${desc} ... PASS`);
-  } else {
-    console.log(`${desc} ... FAIL: ${a} != ${b}`);
-  }
 }
 
 

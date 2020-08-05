@@ -1,3 +1,4 @@
+const assertEquals = require('../utils/assertEquals')
 /*
   Given a non-empty, singly linked list with head node head, return a middle node of linked list.
 
@@ -64,13 +65,6 @@ function appendToList(head, value) {
   return tail.next; 
 }
 
-function assertEquals(a, b, desc) {
-  if (a === b) {
-    console.log(`${desc} ... PASS`);
-  } else {
-    console.log(`${desc} ... FAIL: ${a} != ${b}`)
-  }
-}
 
 
 
