@@ -9,6 +9,24 @@ function common_elements(list1, list2) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const arr1 = [1, 3, 4, 6, 7, 9]
 const arr2 = [1, 2, 4, 5, 9, 10]
 console.log(_.isEqual(common_elements(arr1, arr2), [1, 4, 9]))
@@ -20,27 +38,6 @@ console.log(_.isEqual(common_elements(arr3, arr4), [1, 2, 9, 10, 12]))
 const arr5 = [0, 1, 2, 3, 4, 5]
 const arr6 = [6, 7, 8, 9, 10, 11]
 console.log(_.isEqual(common_elements(arr5, arr6), []))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
