@@ -6,7 +6,9 @@ Check if two strings are anagrams. Assume only english lowercase letters.
  "anagram" and "nagaram" are anagrams
 */
 
-var isAnagram = function(s, t) {}
+var isAnagram = function(s1, s2) {}
+
+
 
 
 
