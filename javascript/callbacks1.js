@@ -17,11 +17,7 @@ function addTwo(n) {
 }
 
 function map(list, cb) {
-  var results = []
-  list.forEach(i => {
-    results.push(cb(i))
-  })
-  return results
+  // do something
 }
 
 console.log('exercise 1:')
@@ -39,9 +35,7 @@ forEach does not return anything.
 */
 
 function myForEach(list, cb) {
-  for(let i = 0; i < list.length; i++) {
-    cb(list[i])
-  }
+  // do something
 }
 
 let alphabet = "";
@@ -67,11 +61,7 @@ console.log(mapWith([1, 2, 3], addTwo)); should output [ 3, 4, 5 ]
 */
 
 function mapWith(list, cb) {
-  const results = []
-  myForEach(list, n => {
-    results.push(cb(n))
-  })
-  return results
+  // do something
 }
 
 console.log('Exercise 3:')
@@ -93,11 +83,7 @@ console.log(reduce(nums, add, 0)) // 8
 */
 
 function myReduce(list, cb, acc) {
-  acc = acc === 0 || aa ? acc : list[0]
-  list.forEach(n => {
-    acc = cb(acc, n)
-  })
-  return acc
+  // do something
 }
 
 const nums = [4, 1, 3];
@@ -122,12 +108,69 @@ console.log(
 */
 
 function intersection(...arrays) {
-  return arrays.reduce((acc, array) => {
-    return array.filter(item => acc.includes(item))
-  })
+  // do something
 }
 
 console.log('exercise 5:')
 console.log(
   _.isEqual(intersection([5, 10, 15, 20], [15, 88, 1, 5, 7], [1, 10, 15, 5, 20]), [15, 5])
 )
+
+
+
+
+
+/*
+
+Solutions:
+
+
+
+exercise 1:
+
+function map(list, cb) {
+  var results = []
+  list.forEach(i => {
+    results.push(cb(i))
+  })
+  return results
+}
+
+
+exercise 2:
+
+function myForEach(list, cb) {
+  for(let i = 0; i < list.length; i++) {
+    cb(list[i])
+  }
+}
+
+exercise 3:
+
+function mapWith(list, cb) {
+  const results = []
+  myForEach(list, n => {
+    results.push(cb(n))
+  })
+  return results
+}
+
+exercise 4:
+
+function myReduce(list, cb, acc) {
+  acc = acc === 0 || aa ? acc : list[0]
+  list.forEach(n => {
+    acc = cb(acc, n)
+  })
+  return acc
+}
+
+exercise 5:
+
+function intersection(...arrays) {
+  return arrays.reduce((acc, array) => {
+    return array.filter(item => acc.includes(item))
+  })
+}
+
+*/
