@@ -1,5 +1,8 @@
 var _ = require('lodash')
 const assertEquals = require('../utils/assertEquals')
+
+// https://dev.to/internettradie/mastering-hard-parts-of-javascript-callbacks-iii-19g0
+
 /*
 
 Exercise 1:
