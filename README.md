@@ -8,3 +8,6 @@
 4. "Runners" techique
     * can be used to get O(1) space
     * "slow" and "fast" runners/pointers can be used to detect cycles
+5. How to traverse sections of a string given:
+    * for i in range(len(str) - len(word) + 1):
+        window = s[i:i + len(word)]
