@@ -23,11 +23,7 @@ and that "hit" isn't the answer even though it occurs more because it is banned.
 """
 
 def mostCommonWord(paragraph, banned):
-  """
-  :type paragraph: str
-  :type banned: List[str]
-  :rtype: str
-  """
+  return False
   
 
 
@@ -100,4 +96,59 @@ Therefore, the overall space complexity of the algorithm is \mathcal{O}(N + M)O(
 """
 
 
+
+
+
+"""
+in one go...
+
+def mostCommonWord(paragraph, banned):
+  banned_words = set(banned)
+  ans = ""
+  max_count = 0
+  word_count = dict()
+  word_buffer = []
+
+  for p, char in enumerate(paragraph):
+    print(p)
+    #1). consume the characters in a word
+    if char.isalnum():
+      word_buffer.append(char.lower())
+      if p != len(paragraph)-1:
+        continue
+
+    #2). at the end of one word or at the end of paragraph
+    if len(word_buffer) > 0:
+      word = "".join(word_buffer)
+      if word not in banned_words:
+        word_count[word] = 1 if word not in word_count else word_count[word] + 1
+        if word_count[word] > max_count:
+          max_count = word_count[word]
+          ans = word
+      # reset the buffer for the next word
+      word_buffer = []
+
+  return ans
+
+
+
+Let NN be the number of characters in the input string and MM be the number of characters in the banned list.
+
+Time Complexity: \mathcal{O}(N + M)O(N+M).
+
+We traverse each character in the input string once and only once. At each iteration, it takes constant time to perform the operations, except the operation that we build a new string out of the buffer. Excluding the cost of string-building out of the iteration, we can consider the cost of iterations as \mathcal{O}(N)O(N).
+
+If we combine all the string-building operations all together, in total it would take another \mathcal{O}(N)O(N) time.
+
+In addition, we built a set out of the list of banned words, which would take \mathcal{O}(M)O(M) time.
+
+Hence, the overall time complexity of the algorithm is \mathcal{O}(N) + \mathcal{O}(N) + \mathcal{O}(M) = \mathcal{O}(N + M)O(N)+O(N)+O(M)=O(N+M).
+
+Space Complexity: \mathcal{O}(N + M)O(N+M).
+
+We built a hashmap to count the frequency of each unique word, whose space would be of \mathcal{O}(N)O(N).
+
+Similarly, we built a set out of the banned word list, which would consume additional \mathcal{O}(M)O(M) space.
+
+Therefore, the overall space complexity of the algorithm is \mathcal{O}(N + M)O(N+M).
 """
