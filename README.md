@@ -11,3 +11,5 @@
 5. How to traverse sections of a string given:
     * for i in range(len(str) - len(word) + 1):
         window = s[i:i + len(word)]
+6. How to iterate up to length of array/string then reset:
+    * array[(idx - 1) % array.length]

@@ -11,9 +11,7 @@ const assertEquals = require('../utils/assertEquals')
     'ABC' => null
 */
 
-function firstChar(str) {
-
-}
+function firstChar(str) {}
 
 
 
@@ -29,7 +27,7 @@ function firstChar(str) {
 
 
 assertEquals(firstChar('ABCA'), 'A', 'ABCA')
-assertEquals('BCABA', 'B', 'BCABA')
+assertEquals(firstChar('BCABA'), 'B', 'BCABA')
 assertEquals(firstChar('ABC'), null, 'ABC')
 
 
