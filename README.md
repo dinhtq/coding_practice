@@ -13,3 +13,5 @@
         window = s[i:i + len(word)]
 6. How to iterate up to length of array/string then reset:
     * array[(idx - 1) % array.length]
+7. Python modulo operator on negative numbers:
+    * -5 % 4 = 3
