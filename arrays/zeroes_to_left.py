@@ -31,7 +31,10 @@ print(arr == [0, 0, 0, 10, 20, 3, 5])
 
 
 
-""" solution
+""" solution 
+
+runtime O(n)
+memory O(1)
 
 def move_zeroes(array):
   if len(array) < 1:
