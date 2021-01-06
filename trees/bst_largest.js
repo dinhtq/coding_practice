@@ -2,18 +2,10 @@
     Write a function to find the largest element in a binary search tree.
 */
 
-function findLargest(treeRoot) {
-  if (!treeRoot) {
-    return null
-  }
+function findLargest(treeRoot) {}
 
-  let curNode = treeRoot
-  while(curNode.right) {
-    curNode = curNode.right
-  }
 
-  return curNode.value
-}
+
 
 
 
@@ -117,3 +109,36 @@ function assertThrowsError(func, desc) {
     console.log(`${desc} ... PASS`);
   }
 }
+
+
+
+
+
+
+// solutions
+
+
+// recursive
+// function findLargest(treeRoot) {
+//   if (!treeRoot) {
+//     return null
+//   }
+//   if (treeRoot && !treeRoot.right) {
+//     return treeRoot.value
+//   }
+//   return findLargest(treeRoot.right)
+// }
+
+// iterative
+// function findLargest(treeRoot) {
+//   if (!treeRoot) {
+//     return null
+//   }
+
+//   let curNode = treeRoot
+//   while(curNode.right) {
+//     curNode = curNode.right
+//   }
+
+//   return curNode.value
+// }

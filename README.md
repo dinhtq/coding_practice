@@ -15,3 +15,6 @@
     * array[(idx - 1) % array.length]
 7. Python modulo operator on negative numbers:
     * -5 % 4 = 3
+8. Reverse Polish Notation
+    *  Use stack; when encounter value, add to stack; when encounter operator, pop last two items as terms on operator, then push result onto stack
+    *  Return last item in stack
